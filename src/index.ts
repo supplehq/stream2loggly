@@ -4,11 +4,9 @@ import pump from 'pump'
 import through from 'through2'
 import loggly from 'node-loggly-bulk'
 
-if (argv.token || argv.subdomain) {
-  console.error('Loggly customer token and subdomain must be needed')
-}
+const { verbose } = argv
 
-const client = (loggly).createClient({
+const client = loggly.createClient({
   token: argv.token || process.env.LOGGLY_CUSTOMER_TOKEN,
   subdomain: argv.subdomain || process.env.LOGGLY_SUBDOMAIN,
   bufferOptions: {
@@ -30,7 +28,7 @@ pump(
     }, (err: any, res: any) => {
       if (err) {
         console.error(err)
-      } else if (argv.verbose) {
+      } else if (verbose) {
         console.log(res)
       }
     })

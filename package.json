@@ -1,6 +1,19 @@
 {
   "name": "stream2loggly",
   "version": "0.0.1-1",
+  "description": "CLI Tool for send stream to Loggly",
+  "keywords": [
+    "CLI",
+    "stream",
+    "loggly",
+    "JSON"
+  ],
+  "author": "joonsung.um@supple.kr",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/supplehq/stream2loggly.git"
+  },
   "main": "dist",
   "typings": "dist",
   "bin": {
@@ -9,13 +22,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "tsc",
-    "test": "jest"
-  },
-  "devDependencies": {
-    "rimraf": "^2.6.2",
-    "ts-node": "^6.0.3",
-    "tslint": "^5.10.0",
-    "typescript": "^2.8.3"
+    "lint": "tslint -c tslint.production.json **/*.{ts,tsx}"
   },
   "dependencies": {
     "@types/pump": "^1.0.1",
@@ -26,7 +33,14 @@
     "pump": "^3.0.0",
     "split2": "^2.2.0",
     "through2": "^2.0.3",
+    "tslib": "^1.9.1",
     "yargs": "^11.0.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.2",
+    "ts-node": "^6.0.3",
+    "tslint": "^5.10.0",
+    "typescript": "^2.8.3"
   },
   "jest": {
     "transform": {
@@ -48,7 +62,5 @@
     "bin",
     "src",
     "dist"
-  ],
-  "author": "",
-  "license": ""
+  ]
 }
