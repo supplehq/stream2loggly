@@ -1,0 +1,54 @@
+{
+  "name": "stream2loggly",
+  "version": "0.0.0",
+  "main": "dist",
+  "typings": "dist",
+  "bin": {
+    "stream2loggly": "./bin/run"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.2",
+    "ts-node": "^6.0.3",
+    "tslint": "^5.10.0",
+    "typescript": "^2.8.3"
+  },
+  "dependencies": {
+    "@types/pump": "^1.0.1",
+    "@types/split2": "^2.1.6",
+    "@types/through2": "^2.0.33",
+    "@types/yargs": "^11.0.0",
+    "node-loggly-bulk": "^2.2.2",
+    "pump": "^3.0.0",
+    "split2": "^2.2.0",
+    "through2": "^2.0.3",
+    "yargs": "^11.0.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(tsx?)$",
+    "testPathIgnorePatterns": [
+      "node_modules"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  },
+  "files": [
+    "bin",
+    "src",
+    "dist"
+  ],
+  "author": "",
+  "license": ""
+}

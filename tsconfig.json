@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "noUnusedLocals": false,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "strict": true,
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}
