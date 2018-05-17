@@ -1,6 +1,6 @@
-# JSON2Loggly
+# Stream2Loggly
 
-CLI Tool for send stream to loggly
+CLI Tool for send stream to Loggly
 
 ## License
 
@@ -12,10 +12,10 @@ Input stream as `stdin`, send to Loggly
 
 ### Params
 
-`--token` : Loggly token
-`--subdomain` : Loggly subdomain
-`--json` : (optional) defaults to `true`
-`--bufferOptions` : (optional) defaults to `{ size: 500, retriesInMilliSeconds: 30 * 1000 }`
+`--token` : Loggly token  
+`--subdomain` : Loggly subdomain  
+`--json` : (optional) defaults to `true`  
+`--bufferOptions` : (optional) defaults to `{ size: 500, retriesInMilliSeconds: 30 * 1000 }`  
 
 ### Example
 
