@@ -2,10 +2,6 @@
 
 CLI Tool for send stream to Loggly
 
-## License
-
-Unlicensed
-
 ## Usage
 
 Input stream as `stdin`, send to Loggly
