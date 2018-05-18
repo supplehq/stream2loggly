@@ -15,7 +15,7 @@ const client = loggly.createClient({
   },
   json: argv.json || true,
   tags: argv.tags || ['stream2loggly'],
-  verbose: argv.verbose || false,
+  verbose: verbose || false,
 })
 
 pump(
@@ -23,7 +23,7 @@ pump(
   split(JSON.parse),
   through.obj((chunk: any, enc: any, cb: any) => {
     if (verbose) {
-      console.log(`Loggly send: ${chunk}`)
+      console.log(`Loggly send: ${JSON.stringify(chunk)}`)
     }
     client.log({
       ...chunk,
