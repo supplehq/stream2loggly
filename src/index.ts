@@ -22,14 +22,16 @@ pump(
   process.stdin,
   split(JSON.parse),
   through.obj((chunk: any, enc: any, cb: any) => {
+    if (verbose) {
+      console.log(`Loggly send: ${chunk}`)
+    }
     client.log({
       ...chunk,
-      timestamp: new Date().toISOString(),
     }, (err: any, res: any) => {
       if (err) {
         console.error(err)
       } else if (verbose) {
-        console.log(res)
+        console.log(`Loggly done: ${JSON.stringify(chunk)}`)
       }
     })
 
