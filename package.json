@@ -1,6 +1,6 @@
 {
   "name": "stream2loggly",
-  "version": "0.0.1-4",
+  "version": "0.0.1-5",
   "description": "CLI Tool for send JSON stream to Loggly",
   "keywords": [
     "CLI",
