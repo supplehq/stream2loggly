@@ -1,12 +1,13 @@
 {
   "name": "stream2loggly",
   "version": "0.0.1-3",
-  "description": "CLI Tool for send stream to Loggly",
+  "description": "CLI Tool for send JSON stream to Loggly",
   "keywords": [
     "CLI",
     "stream",
     "loggly",
-    "JSON"
+    "JSON",
+    "NDJ"
   ],
   "author": "joonsung.um@supple.kr",
   "license": "MIT",
@@ -41,22 +42,6 @@
     "ts-node": "^6.0.3",
     "tslint": "^5.10.0",
     "typescript": "^2.8.3"
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(tsx?)$",
-    "testPathIgnorePatterns": [
-      "node_modules"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json"
-    ]
   },
   "files": [
     "bin",
