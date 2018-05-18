@@ -22,7 +22,7 @@ pump(
   process.stdin,
   split(JSON.parse),
   through.obj((chunk: any, enc: any, cb: any) => {
-    if (verbose) {
+    if (verbose === true) {
       console.log(`Loggly send: ${JSON.stringify(chunk)}`)
     }
     client.log({
@@ -30,7 +30,7 @@ pump(
     }, (err: any, res: any) => {
       if (err) {
         console.error(err)
-      } else if (verbose) {
+      } else if (verbose === true) {
         console.log(`Loggly done: ${JSON.stringify(chunk)}`)
       }
     })
