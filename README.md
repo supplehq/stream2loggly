@@ -1,6 +1,11 @@
 # Stream2Loggly
 
-CLI Tool for send JSON stream to Loggly
+CLI Tool for send JSON stream to Loggly  
+[![CircleCI](https://circleci.com/gh/supplehq/stream2loggly.svg?style=svg)](https://circleci.com/gh/supplehq/stream2loggly)  
+  
+- **Stream ready** : Just send the JSON object to the stream.
+- **Any logger can use** : You can use any logger that can print to a JSON object.
+- **Available via CLI** : Choose between shell commands through pipes or child process spawning.
 
 ## Usage
 
